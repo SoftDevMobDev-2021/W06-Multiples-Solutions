@@ -6,15 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/factor1"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilFactor1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@id/multiply"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="@id/times"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/multiply"
+        app:layout_constraintEnd_toStartOf="@id/times"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/factor1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="num" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/times"
@@ -23,7 +29,7 @@
         android:text="x"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@id/multiply"
-        app:layout_constraintLeft_toRightOf="@id/factor1"
+        app:layout_constraintLeft_toRightOf="@id/tilFactor1"
         app:layout_constraintRight_toLeftOf="@id/factor2"
         app:layout_constraintTop_toTopOf="parent" />
 
